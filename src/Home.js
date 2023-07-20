@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
@@ -6,6 +6,8 @@ const Home = () => {
     const newBlogs = blogs.filter((blogs) => blogs.id != id);
     setBlogs(newBlogs);
   };
+
+  useEffect(() => {});
 
   const [blogs, setBlogs] = useState([
     { title: "My new website", body: "lorem ipsum...", author: "mario", id: 1 },
